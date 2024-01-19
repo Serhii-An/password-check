@@ -12,13 +12,13 @@ export class PasswordFormComponent implements OnInit {
   letterRegex: RegExp = new RegExp(/[\p{L}]/u);
   digitRegex: RegExp = new RegExp(/[\d]/);
   minPasswordLength: number = 8;
-  passwordStrenght: number = 0;
+  passwordStrength: number = 0;
 
   passwordForm: FormGroup = new FormGroup({
     password: new FormControl('', [Validators.minLength(this.minPasswordLength)])
   });
 
-  passwordStrenghtTypes = new Map<number, string>([
+  passwordStrengthTypes = new Map<number, string>([
     [0, ''],
     [1, 'easy'],
     [2, 'medium'],
@@ -28,7 +28,7 @@ export class PasswordFormComponent implements OnInit {
 
   calculatePasswordStrength(str: string): void {
     if (str.length < this.minPasswordLength) {
-      this.passwordStrenght = 0;
+      this.passwordStrength = 0;
       return;
     };
     const passwordParams: IPassParams = {
@@ -38,7 +38,7 @@ export class PasswordFormComponent implements OnInit {
     }
 
 
-    this.passwordStrenght = Object.values(passwordParams).reduce(
+    this.passwordStrength = Object.values(passwordParams).reduce(
       (accumulator, currentValue) => accumulator + currentValue, 0
     );
   }
