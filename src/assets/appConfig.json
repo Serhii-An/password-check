@@ -1,0 +1,8 @@
+{
+    "minPasswordLength": 8,
+    "regExps":{
+        "symbolRegexp": "[!\/@\/#\/$\/%\/&\/'\/(\/)\/*\/+\/,\/.\/:\/;\/{\/}\/[\\]^\/_\/`\/~\\-\/<\/>\/=\/?\"]",
+        "letterRegexp": "[a-zA-Z]",
+        "digitRegexp": "[\\d]"
+    }
+}

@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import "app/styles/variables";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.textField {
+    width: 100%;
+    height: 30px;
+    padding: 0 5px;
+    border-color: var(--base-input-border-color);
+    border-radius: 5px;
+}

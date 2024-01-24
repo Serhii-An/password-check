@@ -1,0 +1,43 @@
+$base-bar-color:rgb(128, 128, 128);
+
+.strength-scale {
+    margin-top: 10px;
+    .scale-bar {
+        display: flex;
+        justify-content: space-between;    
+    }
+    .scale-bar-item {
+        background-color: $base-bar-color;
+        width: 33%;
+        height: 5px;
+        border-radius: 5px;
+    }
+
+    &.error {
+        color: var(--error-color);
+        .scale-bar .scale-bar-item {
+            background-color: var(--error-color);
+        }
+    }
+
+    &.easy {
+        color: var(--easy-password-color);
+        .scale-bar-item:first-child {
+            background-color: var(--easy-password-color);
+        }
+    }
+
+    &.medium {
+        color: var(--medium-password-color);
+        .scale-bar-item:first-child, div:first-child + div {
+            background-color: var(--medium-password-color);
+        }
+    }
+
+    &.strong {
+        color: var(--strong-password-color);
+        .scale-bar-item {
+            background-color: var(--strong-password-color);
+        }
+    }
+}
