@@ -13,7 +13,7 @@ import { Subject } from 'rxjs';
 export class PasswordFormComponent implements OnInit, OnDestroy {
   passwordStrength: string = '';
   minPasswordLength: number = config.minPasswordLength;
-  private destroyed$ = new Subject<void>();
+  private destroyed$: Subject<boolean> = new Subject<boolean>();
 
   constructor(private passwordCheckService: PasswordCheckService) {};
 
@@ -33,6 +33,7 @@ export class PasswordFormComponent implements OnInit, OnDestroy {
 
 
   ngOnDestroy(): void {
-    this.destroyed$.next();
+    this.destroyed$.next(true);
+    this.destroyed$.unsubscribe();
   }
 }
