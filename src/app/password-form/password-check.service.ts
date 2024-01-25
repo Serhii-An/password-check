@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { IPassParams } from './interfaces';
-import { TestRegExpService } from './test-reg-exp.service';
+import { IPassParams } from '../shared/interfaces';
+import { TestRegExpService } from '../shared/test-reg-exp.service';
 import config from '../../assets/appConfig.json';
 
 @Injectable({

@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { PasswordCheckService } from '../shared/password-check.service';
+import { PasswordCheckService } from './password-check.service';
 import config from '../../assets/appConfig.json';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';

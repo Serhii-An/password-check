@@ -1,6 +1,5 @@
 import { Component, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { PasswordCheckService } from '../shared/password-check.service';
 
 @Component({
   selector: 'app-text-input-custom',
@@ -16,7 +15,7 @@ import { PasswordCheckService } from '../shared/password-check.service';
 })
 
 export class TextInputCustomComponent implements ControlValueAccessor {
-  constructor(private passwordCheckService: PasswordCheckService) {};
+  constructor() {};
 
   @Input() placeholder: string = '';
   public value: string | undefined;
